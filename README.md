@@ -1,2 +1,4 @@
-# FitForge---Where-Strength-Meets-Transformation.
-FitForge -  Where Strength Meets Transformation , a HTML CSS, JavaScript Based Gym Web Application
+# Core React
+Hello This Repo only consists of core fundamental concepts of React .
+Happy Learning
+Location - Rajarshi Chakraborty@arghya2005 MINGW64 ~/Everything About Programing/Becoming Brilliant (main)
