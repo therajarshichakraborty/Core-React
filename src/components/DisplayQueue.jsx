@@ -12,7 +12,18 @@ function DisplayQueue({ queue, onUpdateStatus, onRemove }) {
 				return 'grey';
 		}
 	};
-	return <div></div>;
+	return (
+		<>
+			<div>
+				<h2>Current User</h2>
+				{queue.length === 0 ? (
+					<p>No consumer there</p>
+				) : (
+					<p>one consumer there</p>
+				)}
+			</div>
+		</>
+	);
 }
 
 export default DisplayQueue;
