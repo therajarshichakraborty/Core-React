@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './App.css';
 const App = () => {
 	const btnBaseStyle = {
@@ -22,6 +23,10 @@ const App = () => {
 		textAlign: 'center',
 	};
 
+	const [count, setCount] = useState(0);
+	const incrementHandler = (number)=>{
+		setCount(number)
+	}
 	return (
 		<div
 			style={{
@@ -33,7 +38,7 @@ const App = () => {
 				textAlign: 'center',
 			}}>
 			<h1>React Fundamentals</h1>
-			<p style={{ color: '#888' }}>Hello Counter</p>
+			<p style={{ color: '#888' }}>Hello Counter {count}</p>
 
 			<div
 				className="card"
@@ -42,11 +47,12 @@ const App = () => {
 					margin: '20px 0',
 					fontWeight: 'bold',
 				}}>
-				counter is 99
+				counter is {count}
 			</div>
 
 			<div style={{ marginBottom: '20px' }}>
 				<button
+				onClick={()=> incrementHandler(90)}
 					className="btn"
 					style={btnBaseStyle}>
 					Increase the count
