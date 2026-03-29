@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import DisplayForm from './components/DisplayForm';
+import DisplayQueue from './components/DisplayQueue';
 
 const App = () => {
 	const btnBaseStyle = {
@@ -50,7 +51,11 @@ const App = () => {
 	};
 
 	const removeFromQueue = (id) => {
-		// remove from the queue
+		setQueue(
+			queue.filter((customer) => {
+				customer.id !== id
+			}),
+		);
 	};
 
 	return (
@@ -129,7 +134,11 @@ const App = () => {
 				</header>
 				<main>
 					<DisplayForm addOn={addToQueue} />
-					<h1>QueueDisplay</h1>
+					<DisplayQueue
+						queue={queue}
+						onUpdateStatus={updateToQueue}
+						onRemove={removeFromQueue}
+					/>
 				</main>
 			</div>
 		</>
