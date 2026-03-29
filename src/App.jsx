@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import DisplayForm from './components/DisplayForm';
+
+
 const App = () => {
 	const btnBaseStyle = {
 		margin: '0 5px',
