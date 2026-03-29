@@ -30,69 +30,82 @@ const App = () => {
 	// 	setCount(number)
 	// }
 
-	
 	return (
-		<div
-			style={{
-				backgroundColor: '#0b0c10',
-				color: 'white',
-				minHeight: '100vh',
-				padding: '40px',
-				fontFamily: 'sans-serif',
-				textAlign: 'center',
-			}}>
-			<h1>React Fundamentals</h1>
-			<p style={{ color: '#888' }}>Hello Counter {count}</p>
-
+		<>
 			<div
-				className="card"
 				style={{
-					fontSize: '24px',
-					margin: '20px 0',
-					fontWeight: 'bold',
+					backgroundColor: '#0b0c10',
+					color: 'white',
+					padding: '40px',
+					fontFamily: 'sans-serif',
+					textAlign: 'center',
 				}}>
-				counter is {count}
-			</div>
+				<h1>React Fundamentals</h1>
+				<p style={{ color: '#888' }}>Hello Counter {count}</p>
 
-			<div style={{ marginBottom: '20px' }}>
-				<button
-					onClick={() => setCount(count + 1)}
-					className="btn"
-					style={btnBaseStyle}>
-					Increase the count
-				</button>
-				<button
-					className="btn"
-					onClick={() => setCount((count) => Math.max(count - 1, 0))}
-					style={btnBaseStyle}>
-					Decrease the count
-				</button>
-				<button
-					className="btn"
-					onClick={() => setCount((count) => 0)}
-					style={btnBaseStyle}>
-					Reset
-				</button>
-			</div>
+				<div
+					className="card"
+					style={{
+						fontSize: '24px',
+						margin: '20px 0',
+						fontWeight: 'bold',
+					}}>
+					counter is {count}
+				</div>
 
-			<div style={{ marginTop: '30px' }}>
-				<input
-					type="text"
-					value={countToSet}
-					onChange={(event) => setCountToSet(Number(event.target.value))}
-					style={inputStyle}
-				/>
-				<button
-					className="btn"
-					onClick={()=>{
-						setCount(Number(countToSet))
-						setCountToSet(0)
-					}}
-					style={{ ...btnBaseStyle, marginLeft: '10px' }}>
-					Set the value to {countToSet}
-				</button>
+				<div style={{ marginBottom: '20px' }}>
+					<button
+						onClick={() => setCount(count + 1)}
+						className="btn"
+						style={btnBaseStyle}>
+						Increase the count
+					</button>
+					<button
+						className="btn"
+						onClick={() => setCount((count) => Math.max(count - 1, 0))}
+						style={btnBaseStyle}>
+						Decrease the count
+					</button>
+					<button
+						className="btn"
+						onClick={() => setCount((count) => 0)}
+						style={btnBaseStyle}>
+						Reset
+					</button>
+				</div>
+
+				<div style={{ marginTop: '30px' }}>
+					<input
+						type="text"
+						value={countToSet}
+						onChange={(event) => setCountToSet(Number(event.target.value))}
+						style={inputStyle}
+					/>
+					<button
+						className="btn"
+						onClick={() => {
+							setCount(Number(countToSet));
+							setCountToSet(0);
+						}}
+						style={{ ...btnBaseStyle, marginLeft: '10px' }}>
+						Set the value to {countToSet}
+					</button>
+				</div>
 			</div>
-		</div>
+			<div
+				style={{
+					backgroundColor: '#0b0c10',
+					color: 'white',
+					padding: '40px',
+					fontFamily: 'sans-serif',
+					textAlign: 'center',
+				}}>
+				<header>
+					<h1>React Queue Management Application</h1>
+					<p>Manage your customers efficiently</p>
+				</header>
+			</div>
+		</>
 	);
 };
 
