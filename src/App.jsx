@@ -34,7 +34,11 @@ const App = () => {
 	// }
 
 	const addToQueue = (customer) => {
-		// add data to queue
+		setQueue([...queue], {
+			...customer,
+			id: Math.floor(Math.random() * 100 + 1),
+			status: 'waiting',
+		});
 	};
 
 	const updateToQueue = (id, newStatus) => {
@@ -120,7 +124,7 @@ const App = () => {
 					<p>Manage your customers efficiently</p>
 				</header>
 				<main>
-					<DisplayForm addOn={addToQueue}/>
+					<DisplayForm addOn={addToQueue} />
 					<h1>QueueDisplay</h1>
 				</main>
 			</div>
