@@ -26,7 +26,6 @@ const App = () => {
 	const [count, setCount] = useState(0);
 	const [countToSet, setCountToSet] = useState(0);
 
-	
 	// const incrementHandler = (number)=>{
 	// 	setCount(number)
 	// }
@@ -77,14 +76,14 @@ const App = () => {
 			<div style={{ marginTop: '30px' }}>
 				<input
 					type="text"
-					value="779"
+					value={countToSet}
+					onChange={(event) => setCountToSet(Number(event.target.value))}
 					style={inputStyle}
-					readOnly
 				/>
 				<button
 					className="btn"
 					style={{ ...btnBaseStyle, marginLeft: '10px' }}>
-					Set the value to 779
+					Set the value to {countToSet}
 				</button>
 			</div>
 		</div>
