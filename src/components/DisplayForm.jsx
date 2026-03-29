@@ -3,10 +3,28 @@ import React, { useState } from 'react';
 const DisplayForm = ({ addOn }) => {
 	const [name, setName] = useState('');
 	const [service, setService] = useState('');
-	const handleSubmit = (event) => {};
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		if (!name.trim() || !service.trim()) {
+			return;
+		}
+		addOn({ name, service });
+		setName('');
+		setService('');
+	};
 	return (
 		<div>
-			<h1>QueueForm</h1>
+			<form onSubmit={handleSubmit}>
+				<h2>Add Element to Queue</h2>
+				<div>
+					<input
+						type="text"
+						value={name}
+						placeholder="name"
+						onChange={(event) => setName(event.target.value)}
+					/>
+				</div>
+			</form>
 		</div>
 	);
 };
