@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaUserPlus } from 'react-icons/fa';
 
 const DisplayForm = ({ addOn }) => {
 	const [name, setName] = useState('');
@@ -24,6 +25,22 @@ const DisplayForm = ({ addOn }) => {
 						onChange={(event) => setName(event.target.value)}
 					/>
 				</div>
+				<div>
+					<select
+						name="service" 
+						value={service} 
+						onChange={(event) => setService(event.target.value)}>
+						<option value="">Select Service</option>{' '}
+						<option value="Consultation">Consultation</option>
+						<option value="Payment">Payment</option>
+						<option value="Support">Support</option>
+					</select>
+				</div>
+
+				<button type="submit">
+					<FaUserPlus />
+					Add Customer
+				</button>
 			</form>
 		</div>
 	);
