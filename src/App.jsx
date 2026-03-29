@@ -59,6 +59,7 @@ const App = () => {
 				</button>
 				<button
 					className="btn"
+					onClick={()=>setCount((count)=>Math.max((count-1),0))}
 					style={btnBaseStyle}>
 					Decrease the count
 				</button>
