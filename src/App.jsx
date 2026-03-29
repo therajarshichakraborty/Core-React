@@ -29,6 +29,8 @@ const App = () => {
 	// const incrementHandler = (number)=>{
 	// 	setCount(number)
 	// }
+
+	
 	return (
 		<div
 			style={{
@@ -82,6 +84,10 @@ const App = () => {
 				/>
 				<button
 					className="btn"
+					onClick={()=>{
+						setCount(Number(countToSet))
+						setCountToSet(0)
+					}}
 					style={{ ...btnBaseStyle, marginLeft: '10px' }}>
 					Set the value to {countToSet}
 				</button>
