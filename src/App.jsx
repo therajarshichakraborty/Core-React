@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
+import DisplayForm from './components/DisplayForm';
 const App = () => {
 	const btnBaseStyle = {
 		margin: '0 5px',
@@ -118,7 +119,7 @@ const App = () => {
 					<p>Manage your customers efficiently</p>
 				</header>
 				<main>
-					<h1>QueueForm</h1>
+					<DisplayForm addOn={addToQueue}/>
 					<h1>QueueDisplay</h1>
 				</main>
 			</div>
