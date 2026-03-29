@@ -24,6 +24,9 @@ const App = () => {
 	};
 
 	const [count, setCount] = useState(0);
+	const [countToSet, setCountToSet] = useState(0);
+
+	
 	// const incrementHandler = (number)=>{
 	// 	setCount(number)
 	// }
@@ -52,19 +55,20 @@ const App = () => {
 
 			<div style={{ marginBottom: '20px' }}>
 				<button
-				onClick={()=> setCount(count+1)}
+					onClick={() => setCount(count + 1)}
 					className="btn"
 					style={btnBaseStyle}>
 					Increase the count
 				</button>
 				<button
 					className="btn"
-					onClick={()=>setCount((count)=>Math.max((count-1),0))}
+					onClick={() => setCount((count) => Math.max(count - 1, 0))}
 					style={btnBaseStyle}>
 					Decrease the count
 				</button>
 				<button
 					className="btn"
+					onClick={() => setCount((count) => 0)}
 					style={btnBaseStyle}>
 					Reset
 				</button>
