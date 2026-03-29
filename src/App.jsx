@@ -34,15 +34,19 @@ const App = () => {
 	// }
 
 	const addToQueue = (customer) => {
-		setQueue([...queue], {
+		setQueue([...queue, {
 			...customer,
 			id: Math.floor(Math.random() * 100 + 1),
 			status: 'waiting',
-		});
+		}]);
 	};
 
 	const updateToQueue = (id, newStatus) => {
-		// update into the queue
+		setQueue(queue.map(customer=>{ customer.id === id?{
+			...customer,
+			status:newStatus
+		}:customer
+	}))
 	};
 
 	const removeFromQueue = (id) => {
