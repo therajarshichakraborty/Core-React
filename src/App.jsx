@@ -25,10 +25,23 @@ const App = () => {
 
 	const [count, setCount] = useState(0);
 	const [countToSet, setCountToSet] = useState(0);
+	const [queue, setQueue] = useState([]);
 
 	// const incrementHandler = (number)=>{
 	// 	setCount(number)
 	// }
+
+	const addToQueue = (customer) => {
+		// add data to queue
+	};
+
+	const updateToQueue = (id, newStatus) => {
+		// update into the queue
+	};
+
+	const removeFromQueue = (id) => {
+		// remove from the queue
+	};
 
 	return (
 		<>
