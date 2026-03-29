@@ -122,17 +122,35 @@ const App = () => {
 			</div>
 			<div
 				style={{
-					backgroundColor: '#0b0c10',
+					background: 'linear-gradient(180deg, #0b0c10, #111217)',
 					color: 'white',
 					padding: '40px',
-					fontFamily: 'sans-serif',
+					fontFamily: 'Inter, sans-serif',
 					textAlign: 'center',
+					minHeight: '100vh',
 				}}>
-				<header>
-					<h1>React Queue Management Application</h1>
-					<p>Manage your customers efficiently</p>
+				<header style={{ marginBottom: '40px' }}>
+					<h1
+						style={{
+							fontSize: '36px',
+							fontWeight: '700',
+							color: '#6c63ff',
+							marginBottom: '10px',
+						}}>
+						Queue Management System
+					</h1>
+					<p style={{ color: '#aaa', fontSize: '16px' }}>
+						Manage your customers efficiently
+					</p>
 				</header>
-				<main>
+
+				<main
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+						gap: '40px',
+						flexWrap: 'wrap',
+					}}>
 					<DisplayForm addOn={addToQueue} />
 					<DisplayQueue
 						queue={queue}
